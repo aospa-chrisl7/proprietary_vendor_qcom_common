@@ -225,27 +225,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libqcodec2_utils",
-	owner: "qcom/common",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libqcodec2_utils.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libcodec2_vndk", "libqcodec2_base", "libqcodec2_platform", "libhidlbase", "libgrallocutils", "libgralloctypes", "libgralloc.qti", "libdisplayconfig.qti", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@4.0", "libnativewindow", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqcodec2_utils.so"],
-			shared_libs: ["libutils", "libcutils", "liblog", "libcodec2_vndk", "libqcodec2_base", "libqcodec2_platform", "libhidlbase", "libgrallocutils", "libgralloctypes", "libgralloc.qti", "libdisplayconfig.qti", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@4.0", "libnativewindow", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libqcodec2_v4l2codec",
 	owner: "qcom/common",
 	strip: {

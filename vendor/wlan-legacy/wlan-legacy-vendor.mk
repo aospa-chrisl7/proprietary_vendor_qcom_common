@@ -17,7 +17,6 @@ PRODUCT_PACKAGES += \
     athdiag \
     cnss-daemon \
     cnss_diag \
-    hal_proxy_daemon \
     myftm \
     pktlogconf \
     spectraltool \

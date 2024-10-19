@@ -445,24 +445,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libsdmextension",
-	owner: "qcom/common",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsdmextension.so"],
-			shared_libs: ["libdisplaydebug", "libsdmutils", "libsdm-color", "libdisplayskuutils", "libtinyxml2_1", "libtestutils", "libcrypto", "libssl", "libsdedrm", "libutils", "libmemutils", "libvmfilexfer", "libintervmipc", "libdrm", "libbase", "libhidlbase", "libhidltransport", "libcutils", "android.hardware.thermal@1.0", "android.hardware.thermal@2.0", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libsnapdragoncolor-manager",
 	owner: "qcom/common",
 	strip: {

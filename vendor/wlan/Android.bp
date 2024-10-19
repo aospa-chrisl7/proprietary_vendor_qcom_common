@@ -16,10 +16,6 @@ soong_namespace {
         "vendor/qcom/common/vendor/alarm",
         "vendor/qcom/common/vendor/charging",
         "vendor/qcom/common/vendor/display",
-        "vendor/qcom/common/vendor/display/4.19",
-        "vendor/qcom/common/vendor/display/5.10",
-        "vendor/qcom/common/vendor/display/5.15",
-        "vendor/qcom/common/vendor/display/5.4",
         "vendor/qcom/common/vendor/dsprpcd",
         "vendor/qcom/common/vendor/gps-legacy",
         "vendor/qcom/common/vendor/keymaster",
@@ -136,23 +132,6 @@ cc_prebuilt_binary {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/cnss_diag"],
 			shared_libs: ["libcutils", "libhardware_legacy", "libnl", "libcld80211", "libwifi-hal-ctrl", "liblog", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
-	name: "hal_proxy_daemon",
-	owner: "qcom/common",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/hal_proxy_daemon"],
-			shared_libs: ["libnl", "libcutils", "liblog", "libwifi-hal-qcom", "libhardware_legacy", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
